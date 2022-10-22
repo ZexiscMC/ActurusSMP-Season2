@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Home | Acturus SMP</title>
+    <script>
+        function copyClick() {
+            document.querySelector(".copy").style.opacity = "1";
+            document.querySelector(".copy").style.visibility = "visible"
+            setTimeout(() => {
+                document.querySelector(".copy").style.opacity = "0";
+            document.querySelector(".copy").style.visibility = "hidden"
+            }, 5000);
+        }
+        function hiddenCopy() {
+            document.querySelector(".copy").style.opacity = "0";
+            document.querySelector(".copy").style.visibility = "hidden"
+        }
+    </script>
+</head>
+<body>
+    <div class="hdr" id="hdr">
+        <div class="left">
+            <div class="ttl">
+                <span><strong>ACTURUS SMP</strong></span>
+            </div>
+            <div class="itm">
+                <a href="#">
+                    <span>Home</span>
+                </a>
+                <a href="#features">
+                    <span>Features</span>
+                </a>
+                <a href="#store">
+                    <span>Store</span>
+                    <i class='bx bx-minus-front'></i>
+                </a>
+                <a href="">
+                    <span>Helps</span>
+                    <i class='bx bx-minus-front'></i>
+                </a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="login">
+                <a href="">
+                    <i class='bx bxs-user-circle'></i><span>Sign in</span>
+                </a>
+            </div>
+            <div class="ip" title="Click to copy!">
+                <span>MC.ACTURUSSMP.XYZ</span>
+            </div>
+        </div>
+    </div>
+    <div class="copy">
+        <div class="logo">
+            <i class='bx bx-check-circle'></i>
+        </div>
+        <div class="ttl">
+            <span><strong>SUCCES!</strong></span>
+        </div>
+        <div class="desc">
+            <span>The ip has been copy</span>
+            <span>To your clipboard!</span>
+        </div>
+        <div class="btn">
+            <span onclick="hiddenCopy()"><strong>OK</strong></span>
+        </div>
+    </div>
+    <section class="one">
+        <div class="welcome">
+            <div class="text">
+                <div class="ttl">
+                    <span><strong>ACTURUS SMP</strong></span>
+                    <span><strong>SEASON 2</strong></span>
+                </div>
+                <div class="desc">
+                    <span>Minecraft Server Indonesia</span>
+                    
+                </div>
+                <div class="btn" onclick="copyClick()">
+                    <a>
+                        <span>Play Now!</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="news" id="news">
+        <div class="text">
+            <div class="ttl">
+                <span><strong>Announcement</strong></span>
+            </div>
+            <div class="desc">
+                <span>Official news, update will be showed here!</span>
+            </div>
+        </div>
+    </div>
+    <section class="two">
+        <div class="store" id="store">
+            <div class="text">
+                <div class="ttl">
+                    <span><strong>Store</strong></span>
+                    <i class='bx bxs-chevrons-right'></i>
+                </div>
+                <div class="desc">
+                    <span>By Donating this server will help</span>
+                    <span>Us, we really hope you buy our</span>
+                    <span>Rank, Perms cause you help this server</span>
+                    <span>Grow to more quality server.</span>
+                </div>
+            </div>
+            <div class="img">
+                <img src="https://gabutnetwork.net/appealBrowser.png" alt="">
+            </div>
+        </div>
+    </section>
+    <div class="features">
+        <div class="text">
+            <div class="ttl">
+                <span><strong>Our Features</strong></span>
+            </div>
+            <div class="desc">
+                <span>This server has many unique features</span>
+                <span>Have an idea what next? Please give us <a href="">Feedback</a></span>
+            </div>
+        </div>
+        <div class="img">
+            <img alt="">
+            <img alt="">
+            <img alt="">
+        </div>
+    </div>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+            var hdr = document.getElementById("hdr");
+            hdr.classList.toggle("sticky", window.scrollY > 0);
+            if (window.scrollY < 5){
+                hdr.classList.remove("sticky")
+            }
+        })
+    </script>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Signika:wght@400;500;700&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Signika", sans-serif;
+    }
+    .copy{
+        position: fixed;
+        z-index: 150;
+        top: 35%;
+        left: 41%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        background: #2d459f;
+        padding: 30px 45px;
+        border: 2px solid white;
+        border-radius: 30px;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s ease;
+    }
+    .copy::before{
+        content: "";
+        position: absolute;
+        
+        height: 20px;
+        width: 20px;
+        top: -3%;
+        cursor: pointer;
+        color: red;
+        font-size: 30px;
+        background: white;
+        border-radius: 6px;
+        left: 95%;
+        padding: 5px;
+    }
+    .copy .logo{
+        color: white;
+        font-size: 70px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid white;
+        text-align: center;
+    }
+    .copy .ttl{
+        color: #dadafc;
+        font-size: 40px;
+        padding-top: 20px;
+        text-align: center;
+    }
+    .copy .desc{
+        display: grid;
+        background: linear-gradient(40deg, #dadafc, grey);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 23px;
+        text-align: center;
+        margin-top: 10px;
+        line-height: 20px;
+    }
+    .copy .btn{
+        margin-top: 22px;
+        text-align: center;
+        color: white;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    .copy .btn span{
+        background: #2d409f;
+        border: 2px solid #dadafc;
+        border-radius: 10px;
+        padding: 5px 15px;
+    }
+    .features{
+        position: absolute;
+        z-index: -5;
+        margin-top: 820px;
+        background: #2d409f;
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .features .ttl{
+        margin-top: 50px;
+        font-size: 55px;
+        color: #dadafc;
+        text-align: center;
+    }
+    .features .desc{
+        display: grid;
+        background: linear-gradient(40deg, #dadafc, grey);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 23px;
+        text-align: center;
+        line-height: 20px;
+        padding-bottom: 40px;
+    }
+    .features .img img{
+        margin-left: 60px;
+        margin-right: 60px;
+        border-radius: 10px;
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://cdn.discordapp.com/attachments/860034265147506728/1029752521780101131/unknown.png'); 
+        width: 250px;
+        height: 450px;
+
+        border: 2px solid white;
+        transition: 0.5s ease;
+    }
+    .features .img img:hover{
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://cdn.discordapp.com/attachments/860034265147506728/1029752521780101131/unknown.png'); 
+        border: 2px solid white;
+        width: 250px;
+        height: 450px;
+
+
+        transform: translateY(-20px);
+    }
+    .features .img{
+        padding-bottom: 100px;
+        display: flex;
+    }
+    .store{
+        margin-top: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .store .text{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .store .text .ttl{
+        display: flex;
+        align-items: center;
+        font-size: 57px;
+        color: #dadafc;
+        margin-left: 10px;
+    }
+    .store .text .ttl i{
+        margin-left: 10px;
+        transition: 0.5s ease;
+    }
+    .store:hover .text .ttl i{
+        margin-left: 20px;
+    }
+    .store:hover .img{
+        transform: translateY(-20px);
+    }
+    .store .img{
+        margin-left: 300px;
+        transition: 1s ease;
+    }
+    .store .img img{
+        width: 500px;
+        border-radius: 5px;
+    }
+    .store .text .desc{
+        display: grid;
+        background: linear-gradient(40deg, #dadafc, grey);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 20px;
+    }
+    .news{
+        background: #2d409f;
+        border-radius: 30px;
+        height: 850px;
+        margin-top: -25px;
+    }
+    section.two{
+        background-image: url('https://c4.wallpaperflare.com/wallpaper/696/101/121/minecraft-water-sea-cave-wallpaper-preview.jpg');
+        height: 850px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        position: absolute;
+        filter: blur(0px);
+        image-rendering: -moz-crisp-edges;
+        z-index: -1;
+        margin-top: -30px;
+    }
+    .news::before{
+        content: "";
+        position: absolute;
+        background: #2d409f;
+        width: 800px;
+        height: 50px;
+        display: flex;
+        border-radius: 20px;
+        justify-content: center;
+        align-items: center;
+        margin-top: -30px;
+        margin-left: 30%;
+    }
+    .news::after{
+        content: "";
+        position: absolute;
+        background: #2d409f;
+        width: 1500px;
+        height: 60px;
+        margin-top: 825px;
+        border-radius: 10px;
+    }
+    .news .text{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .news .text .ttl{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 5;
+        left: 43%;
+        margin-top: 50px;
+        font-size: 45px;
+        color: #dadafc;
+        text-transform: uppercase;
+    }
+    .news .text .desc{
+        position: absolute;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        z-index: 5;
+        left: 37%;
+        font-size: 30px;
+        margin-top: 120px;
+        background: linear-gradient(40deg, grey, #dadafc);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .welcome{
+        display: grid;
+        margin-top: 200px;
+        margin-left: 190px;
+    }
+    .welcome .text{
+        margin-top: 253px;
+    }
+    .welcome .ttl{
+        display: grid;
+        font-size: 50px;
+        background: linear-gradient(40deg, #dadafc, #2d409f, aqua, aquamarine);
+        background-size: 150%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 40px;
+    }
+    .welcome .desc{
+        margin-left: 5px;
+        margin-top: 5px;
+        background: linear-gradient(40deg, grey, #dadafc);
+        background-size: 25%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 25px;
+    }
+    .welcome .btn{
+        margin-top: 50px;
+        margin-left: 10px;
+        transition: 1s ease;
+    }
+    .welcome .btn a{
+        border: 2px solid #2d409f;
+        color: #2d409f;
+        background: rgba(255,255,255,0.7);
+        text-decoration: none;
+        padding: 8px 15px;
+        font-size: 20px;
+        border-radius: 5px;
+        transition: 1s ease;
+        cursor: pointer;
+    }
+    .welcome .btn a::before{
+        content: "";
+        position: absolute;
+        background: #dadafc;
+        border: 2px solid #2d409f;
+        width: 15px;
+        height: 10px;
+        top: 51.1%;
+        left: 10.4%;
+        transition: 0.8s ease;
+    }
+    .welcome .btn a::after{
+        content: "";
+        position: absolute;
+        background: #dadafc;
+        border: 2px solid #2d409f;
+        width: 15px;
+        height: 10px;
+        top: 55.1%;
+        left: 16.4%;
+        transition: 0.8s ease;
+    }
+    .welcome a:hover{
+        border: 2px solid #dadafc;
+        color: #dadafc;
+        background: #2d409f;
+    }
+    .welcome .btn a:hover::before{
+        background: #2d409f;
+        top: 55.1%;
+        border: 2px solid #dadafc;
+    }
+    .welcome .btn a:hover::after{
+        background: #2d409f;
+        top: 51.1%;
+        border: 2px solid #dadafc;
+    }
+    .hdr{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 40px 10px;
+        background: white;
+        z-index: 100;
+        transition: 0.6s ease;
+    }
+    .hdr.sticky{
+        padding: 25px 10px;
+    }
+    .hdr .left{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hdr .left .ttl{
+        font-size: 35px;
+        background: linear-gradient(40deg, #2d409f, aqua, aquamarine);
+        background-size: 300%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding-right: 10px;
+        border-right: 1px solid #2d409f;
+    }
+    .hdr .left .itm{
+        padding-left: 10px;
+    }
+    .hdr .left .itm a{
+        margin-left: 8px;
+        margin-right: 8px;
+        color: #2d409f;
+        text-decoration: none;
+        font-size: 20px;
+        transition: 0.5s ease;
+    }
+    .hdr .left .itm a:hover{
+        color: #2d459f;
+        border-bottom: 4px solid #2d409f;
+    }
+    .hdr .right{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hdr .right .login{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .hdr .right .login a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #2d409f;
+        color: white;
+        text-decoration: none;
+        padding: 7px 15px;
+        font-size: 22px;
+        border-radius: 15px;
+        transition: 0.5s ease;
+    }
+    .hdr .right .login a:hover{
+        border-bottom: none;
+        color: #2d409f;
+        background: #dadafc;
+    }
+    .hdr .right .login a span{
+        margin-left: 6px;
+    }
+    .hdr .right .ip{
+        margin-left: 10px;
+        margin-right: 10px;
+        background: #2d409f;
+        color: #dadafc;
+        padding: 8px 15px;
+        border-radius: 15px;
+        font-size: 22px;
+        cursor: pointer;
+        transition: 0.5s ease;
+    }
+    .hdr .right .ip:hover{
+        background: #dadafc;
+        color: #2d409f;
+    }
+    section.one{
+        background-image: url('https://cdn.discordapp.com/attachments/860034265147506728/1025639815351369768/20220610_172010.png');
+        height: 850px;
+        margin-top: -130px;
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+</style>
+</html>
