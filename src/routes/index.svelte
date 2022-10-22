@@ -115,7 +115,7 @@
                 </div>
             </div>
             <div class="img">
-                <img src="https://gabutnetwork.net/appealBrowser.png" alt="">
+                <img src="" alt="">
             </div>
         </div>
     </section>
